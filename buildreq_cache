@@ -1,0 +1,7 @@
+0.111
+perl(Capture::Tiny)
+perl(Class::XSAccessor)
+perl(Devel::CheckOS)
+perl(Number::WithError)
+perl(Params::Util)
+perl(Statistics::CaseResampling)
