@@ -4,7 +4,7 @@
 #
 Name     : perl-Dumbbench
 Version  : 0.111
-Release  : 4
+Release  : 5
 URL      : https://cpan.metacpan.org/authors/id/B/BD/BDFOY/Dumbbench-0.111.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/B/BD/BDFOY/Dumbbench-0.111.tar.gz
 Summary  : 'More reliable benchmarking with the least amount of thinking'
@@ -19,6 +19,7 @@ BuildRequires : perl(Devel::CheckOS)
 BuildRequires : perl(Number::WithError)
 BuildRequires : perl(Params::Util)
 BuildRequires : perl(Statistics::CaseResampling)
+BuildRequires : perl(prefork)
 
 %description
 =pod
