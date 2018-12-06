@@ -92,16 +92,16 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.1Benchmark/Dumb.pm
-/usr/lib/perl5/vendor_perl/5.28.1Dumbbench.pm
-/usr/lib/perl5/vendor_perl/5.28.1Dumbbench/BoxPlot.pm
-/usr/lib/perl5/vendor_perl/5.28.1Dumbbench/CPUFrequencyPinner.pm
-/usr/lib/perl5/vendor_perl/5.28.1Dumbbench/Instance.pm
-/usr/lib/perl5/vendor_perl/5.28.1Dumbbench/Instance/Cmd.pm
-/usr/lib/perl5/vendor_perl/5.28.1Dumbbench/Instance/PerlEval.pm
-/usr/lib/perl5/vendor_perl/5.28.1Dumbbench/Instance/PerlSub.pm
-/usr/lib/perl5/vendor_perl/5.28.1Dumbbench/Result.pm
-/usr/lib/perl5/vendor_perl/5.28.1Dumbbench/Stats.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Benchmark/Dumb.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Dumbbench.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Dumbbench/BoxPlot.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Dumbbench/CPUFrequencyPinner.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Dumbbench/Instance.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Dumbbench/Instance/Cmd.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Dumbbench/Instance/PerlEval.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Dumbbench/Instance/PerlSub.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Dumbbench/Result.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Dumbbench/Stats.pm
 
 %files bin
 %defattr(-,root,root,-)
