@@ -4,7 +4,7 @@
 #
 Name     : perl-Dumbbench
 Version  : 0.111
-Release  : 13
+Release  : 14
 URL      : https://cpan.metacpan.org/authors/id/B/BD/BDFOY/Dumbbench-0.111.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/B/BD/BDFOY/Dumbbench-0.111.tar.gz
 Summary  : 'More reliable benchmarking with the least amount of thinking'
@@ -12,6 +12,7 @@ Group    : Development/Tools
 License  : Artistic-1.0-Perl Artistic-2.0
 Requires: perl-Dumbbench-bin = %{version}-%{release}
 Requires: perl-Dumbbench-license = %{version}-%{release}
+Requires: perl-Dumbbench-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 BuildRequires : perl(Capture::Tiny)
 BuildRequires : perl(Class::XSAccessor)
@@ -40,6 +41,7 @@ Summary: dev components for the perl-Dumbbench package.
 Group: Development
 Requires: perl-Dumbbench-bin = %{version}-%{release}
 Provides: perl-Dumbbench-devel = %{version}-%{release}
+Requires: perl-Dumbbench = %{version}-%{release}
 
 %description dev
 dev components for the perl-Dumbbench package.
@@ -53,14 +55,24 @@ Group: Default
 license components for the perl-Dumbbench package.
 
 
+%package perl
+Summary: perl components for the perl-Dumbbench package.
+Group: Default
+Requires: perl-Dumbbench = %{version}-%{release}
+
+%description perl
+perl components for the perl-Dumbbench package.
+
+
 %prep
 %setup -q -n Dumbbench-0.111
+cd %{_builddir}/Dumbbench-0.111
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
+export LANG=C.UTF-8
 if test -f Makefile.PL; then
 %{__perl} Makefile.PL
 make  %{?_smp_mflags}
@@ -70,7 +82,7 @@ else
 fi
 
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
@@ -79,7 +91,7 @@ make TEST_VERBOSE=1 test
 %install
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/perl-Dumbbench
-cp LICENSE %{buildroot}/usr/share/package-licenses/perl-Dumbbench/LICENSE
+cp %{_builddir}/Dumbbench-0.111/LICENSE %{buildroot}/usr/share/package-licenses/perl-Dumbbench/7eae196f187631c5ef901040ef1339dd89183a26
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -92,16 +104,6 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/Benchmark/Dumb.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Dumbbench.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Dumbbench/BoxPlot.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Dumbbench/CPUFrequencyPinner.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Dumbbench/Instance.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Dumbbench/Instance/Cmd.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Dumbbench/Instance/PerlEval.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Dumbbench/Instance/PerlSub.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Dumbbench/Result.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Dumbbench/Stats.pm
 
 %files bin
 %defattr(-,root,root,-)
@@ -118,4 +120,17 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/perl-Dumbbench/LICENSE
+/usr/share/package-licenses/perl-Dumbbench/7eae196f187631c5ef901040ef1339dd89183a26
+
+%files perl
+%defattr(-,root,root,-)
+/usr/lib/perl5/vendor_perl/5.30.1/Benchmark/Dumb.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Dumbbench.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Dumbbench/BoxPlot.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Dumbbench/CPUFrequencyPinner.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Dumbbench/Instance.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Dumbbench/Instance/Cmd.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Dumbbench/Instance/PerlEval.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Dumbbench/Instance/PerlSub.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Dumbbench/Result.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Dumbbench/Stats.pm
