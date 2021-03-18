@@ -4,7 +4,7 @@
 #
 Name     : perl-Dumbbench
 Version  : 0.501
-Release  : 17
+Release  : 18
 URL      : https://cpan.metacpan.org/authors/id/B/BD/BDFOY/Dumbbench-0.501.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/B/BD/BDFOY/Dumbbench-0.501.tar.gz
 Summary  : 'More reliable benchmarking with the least amount of thinking'
@@ -108,13 +108,13 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.3/Benchmark/Dumb.pm
-/usr/lib/perl5/vendor_perl/5.30.3/Dumbbench.pm
-/usr/lib/perl5/vendor_perl/5.30.3/Dumbbench/BoxPlot.pm
-/usr/lib/perl5/vendor_perl/5.30.3/Dumbbench/CPUFrequencyPinner.pm
-/usr/lib/perl5/vendor_perl/5.30.3/Dumbbench/Instance.pm
-/usr/lib/perl5/vendor_perl/5.30.3/Dumbbench/Instance/Cmd.pm
-/usr/lib/perl5/vendor_perl/5.30.3/Dumbbench/Instance/PerlEval.pm
-/usr/lib/perl5/vendor_perl/5.30.3/Dumbbench/Instance/PerlSub.pm
-/usr/lib/perl5/vendor_perl/5.30.3/Dumbbench/Result.pm
-/usr/lib/perl5/vendor_perl/5.30.3/Dumbbench/Stats.pm
+/usr/lib/perl5/vendor_perl/5.32.1/Benchmark/Dumb.pm
+/usr/lib/perl5/vendor_perl/5.32.1/Dumbbench.pm
+/usr/lib/perl5/vendor_perl/5.32.1/Dumbbench/BoxPlot.pm
+/usr/lib/perl5/vendor_perl/5.32.1/Dumbbench/CPUFrequencyPinner.pm
+/usr/lib/perl5/vendor_perl/5.32.1/Dumbbench/Instance.pm
+/usr/lib/perl5/vendor_perl/5.32.1/Dumbbench/Instance/Cmd.pm
+/usr/lib/perl5/vendor_perl/5.32.1/Dumbbench/Instance/PerlEval.pm
+/usr/lib/perl5/vendor_perl/5.32.1/Dumbbench/Instance/PerlSub.pm
+/usr/lib/perl5/vendor_perl/5.32.1/Dumbbench/Result.pm
+/usr/lib/perl5/vendor_perl/5.32.1/Dumbbench/Stats.pm
