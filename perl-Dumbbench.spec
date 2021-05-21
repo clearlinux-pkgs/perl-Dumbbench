@@ -4,7 +4,7 @@
 #
 Name     : perl-Dumbbench
 Version  : 0.501
-Release  : 18
+Release  : 19
 URL      : https://cpan.metacpan.org/authors/id/B/BD/BDFOY/Dumbbench-0.501.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/B/BD/BDFOY/Dumbbench-0.501.tar.gz
 Summary  : 'More reliable benchmarking with the least amount of thinking'
