@@ -4,7 +4,7 @@
 #
 Name     : perl-Dumbbench
 Version  : 0.503
-Release  : 24
+Release  : 25
 URL      : https://cpan.metacpan.org/authors/id/B/BD/BDFOY/Dumbbench-0.503.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/B/BD/BDFOY/Dumbbench-0.503.tar.gz
 Summary  : 'More reliable benchmarking with the least amount of thinking'
@@ -108,13 +108,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.34.0/Benchmark/Dumb.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Dumbbench.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Dumbbench/BoxPlot.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Dumbbench/CPUFrequencyPinner.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Dumbbench/Instance.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Dumbbench/Instance/Cmd.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Dumbbench/Instance/PerlEval.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Dumbbench/Instance/PerlSub.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Dumbbench/Result.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Dumbbench/Stats.pm
+/usr/lib/perl5/*
